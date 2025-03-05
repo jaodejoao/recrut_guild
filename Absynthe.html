@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absynthe Recruta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://s1.pearlcdn.com/NAEU/Upload/WALLPAPER/ac9377ae3d820240605165727699.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(0.3) contrast(1.2) saturate(1.2);
+            z-index: -1;
+        }
+
+        .container-principal {
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 60px 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            max-width: 700px;
+            margin: 20px;
+            position: relative;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #00ff88 0%, #00c853 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+            letter-spacing: 5px;
+            position: relative;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: #00c853;
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        .container-texto {
+            margin-bottom: 40px;
+            position: relative;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container-texto::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: #00c853;
+            border-radius: 3px;
+        }
+
+        .texto-centro {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 16px 0;
+            opacity: 0.95;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-align: left;
+            padding-left: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .texto-centro:hover {
+            transform: translateX(5px);
+        }
+
+        .botao-bonito {
+            display: block;
+            background: linear-gradient(135deg, #00c853, #009624);
+            border-radius: 12px;
+            padding: 14px 28px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            width: 160px;
+            margin: 12px auto;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .botao-bonito:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #00e676, #00c853);
+            box-shadow: 0 10px 25px -5px rgba(0, 200, 83, 0.4);
+        }
+
+        .botao-bonito:active {
+            transform: translateY(1px);
+        }
+
+        .botao-bonito::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .botao-bonito:hover::before {
+            left: 100%;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            .container-principal {
+                padding: 40px 20px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container-principal">
+        <h1>ABSYNTHE</h1>
+        <div class="container-texto">
+            <p class="texto-centro">Teste PvP</p>
+            <p class="texto-centro">Boss de Guilda</p>
+            <p class="texto-centro">Discord Ativo</p>
+            <p class="texto-centro">Somos uma guilda PvP focada em Node T2 / Siege</p>
+            <p class="texto-centro">Ajudamos novatos e retornados</p>
+            <p class="texto-centro">Conteúdo em grupo PvE e PvP</p>
+        </div>
+        <a href="https://www.sa.playblackdesert.com/pt-BR/Adventure/Guild/GuildProfile?guildName=Absynthe&region=SA" class="botao-bonito" target="_blank">Guilda</a>
+        <a href="https://www.sa.playblackdesert.com/pt-BR/Adventure/Profile?profileTarget=tbXSK7e39Sb3U3yPi7UDjnWUhxTsOG5eA1xdg%2bkPHgBd06okZj79aqiu5UozZ6IYPn5ojZUhhuGCrVBoxzwfhJf06LOa5qyOruEfXgtjfuLUyrsFA5OEriHBNo1Bw1GxB0hoCXh5vpkS0t7ZdN4hbB0UdzjJlc%2bBqgl6KABl7Og%3d" class="botao-bonito" target="_blank">Recrutamento</a>
+        <a href="https://discord.gg/Tdy8uprnF5" class="botao-bonito" target="_blank">Discord</a>
+    </div>
+</body>
+</html>
